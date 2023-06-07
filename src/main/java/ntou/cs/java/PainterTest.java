@@ -4,8 +4,8 @@ import javax.swing.JFrame;
 
 public class PainterTest {
 	public static void main(String[] args) {
-		PointReader reader = new FakePointReader();
-		PointWriter writer = new FakePointWriter();
+		PointReader reader = new MyPointReader("points.txt");
+		PointWriter writer = new MyPointWriter("points.txt");
 
 		PainterFrame application = new PainterFrame(reader, writer);
 		application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
